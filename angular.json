@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SecurityMOCK"
+    }
+  },
+  "defaultProject": "SecurityMOCK",
+  "cli": {
+    "analytics": "eca633cf-b8f3-404c-aa1e-e6f837ca7bb7"
+  }
 }
