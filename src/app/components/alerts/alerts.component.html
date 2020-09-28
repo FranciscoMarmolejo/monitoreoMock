@@ -1,0 +1,71 @@
+<div>
+
+    <button (click)="randomize()" id="simulator" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"> <!--  -->
+        Simular alerta
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">ALERTA: <b>Unidad {{vehicle.id}}</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <pre>
+Tipo {{vehicle.tipo}}              {{vehicle.hora}}
+Conductor {{vehicle.driver}}    {{vehicle.ciudad}}
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button (click)="showMore()" type="button" class="btn btn-primary" data-dismiss="modal">Ver más</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <button (click)="drop()" >
+         <img id="alerta" src="../../../assets/alert.png"> 
+    </button>
+
+    <div class="dropdown bg-white rounded shadow-sm" *ngIf="show">
+        <h4 class="container mt-2">Vehículos</h4> 
+        <hr style="height:4px;border:none;color:#333;background-color:#333;">
+
+        <div style="margin-top: 0;" *ngFor="let vehicle of vehicles">
+            <a class="dropdown-item">{{vehicle.id}} 
+                <button (click)="more= !more" type="button" class="btn btn-sm btn-success btn-circle btn-circle-sm m-1">{{vehicle.alertA}}</button>  
+                <button (click)="more= !more" type="button" class="btn btn-warning btn-circle btn-circle-sm m-1">{{vehicle.alertB}}</button>  
+                <button (click)="more= !more" type="button" class="btn btn-danger btn-circle btn-circle-sm m-1">{{vehicle.alertC}}</button> 
+            </a>    
+            <hr>
+        </div>
+    </div>
+
+    <div id="ventana" *ngIf="more">
+
+        <div class="mb-2">
+            | ECO: 6291 | Versa 2015 - FDZ 1456 | 7Okm/h -Detenido | BP: 5  | 
+            <button (click)="more= !more" type="button" class="close ml-1" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <hr>
+        </div>
+        
+        <div>
+            <img class="mb-2" id="trc" src="../../../assets/trc.jpg">
+            <img id="gps" src="../../../assets/gps.png">
+        </div>
+
+        <b>Tipo de Alerta</b> {{vehicle.tipo}} <br>
+        <b>Hora de Activación:</b> 12:50 pm <br> <b>Vehículo</b>:  Versa 2015 - FDZ 1456 <br> <b>Conductor</b>: Jorge López <br>
+        <b>Estado del Vehículo</b>: Detenido <br> <b>Ubicación</b>:  Cobalto 365, Torreón Coahuila <br> 
+        <b>Coordenadas</b>: 25.441554, -100.559554 <br> <b>Paro de motor</b>: Deshabilitado
+        
+    </div>
+
+</div>
+    
