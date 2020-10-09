@@ -1,0 +1,74 @@
+<!-- <button (click)="randomize()" id="simulator" type="button" class="btn btn-danger"> 
+        Simular alerta
+</button> -->
+
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">ALERTA: <b>Unidad {{vehicle.id}}</b></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <pre>
+Tipo {{vehicle.tipo}}              {{vehicle.hora}}
+Conductor {{vehicle.driver}}    {{vehicle.ciudad}}
+                </pre>
+            </div>
+            <div class="modal-footer">
+                <button (click)="showMore()" type="button" class="btn btn-primary" data-dismiss="modal">Ver más</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+    </div> -->
+
+    <!-- <div id="popup" *ngIf="pop">
+
+        <div class="">
+            <b>Tipo de Alerta</b> {{vehicle.tipo}} <br>  
+            <hr>
+        </div>
+        
+        <div class="row">
+
+            <div style="width: 15%;">
+                <img id="alerta2" src="../../../assets/alert2.png">
+            </div>
+
+            <div style="width: 85%;">
+                <b>Vehículo</b>:  Versa 2015 - FDZ 1456 <b>Hora de Activación:</b> 12:50 pm <br>
+                <b>Conductor</b>: Jorge López <b>Ubicación</b>:  Cobalto 365, Torreón Coahuila <br> <br>
+            </div>
+
+        </div>
+
+    </div> -->
+
+ // options = {
+  //   autoClose: true,
+  //   progressBar: true,
+  //   enableSounds: true,
+  //   sounds: {
+  //     success: 'https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233524/success.mp3',
+  //     // path to sound for warn message:
+  //     warning: 'https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233563/warning.mp3',
+  //     // path to sound for error message:
+  //     error: 'https://res.cloudinary.com/dxfq3iotg/video/upload/v1557233574/error.mp3',
+  //   },
+  // };
+
+  <!-- <div class="dropdown bg-white rounded shadow-sm">
+        <h4 class="container mt-2">Vehículos</h4> 
+        <hr style="height:4px;border:none;color:#333;background-color:#333;">
+        <div style="margin-top: 0;" *ngFor="let vehicle of vehicles">
+            <a class="dropdown-item">{{vehicle.id}} 
+                <button (click)="more= !more" type="button" class="btn btn-sm btn-success btn-circle btn-circle-sm m-1">{{vehicle.alertA}}</button>  
+                <button (click)="more= !more" type="button" class="btn btn-warning btn-circle btn-circle-sm m-1">{{vehicle.alertB}}</button>  
+                <button (click)="more= !more" type="button" class="btn btn-danger btn-circle btn-circle-sm m-1">{{vehicle.alertC}}</button> 
+            </a>    
+            <hr>
+        </div>
+    </div> -->
